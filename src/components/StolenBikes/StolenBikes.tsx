@@ -96,6 +96,7 @@ const StolenBikes: React.FC<{}> = (props) => {
       }
       {!notFoundError && <Grid>{bikesList}</Grid>}
       <Pagination
+        casesPerPage={10}
         currentPage={currentPage}
         totalCases={stolenNum.proximity}
         paginate={(pageNumber: number) => setCurrentPage(pageNumber)}
